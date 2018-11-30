@@ -13,7 +13,7 @@
 	genItem "json" "open http://www.wanandroid.com" "imgs/wanandroid.png"
 	fi
 	```
-* `keyword: o`
+* `keyword: op`
 ![](imgs/iconfont.png)
 
 ### short_url
