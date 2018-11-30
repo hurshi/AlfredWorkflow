@@ -12,8 +12,7 @@
 	```
 	if [[ "wanandroid" == ${q}* ]];then
 	genItem "json" "open http://www.wanandroid.com" "imgs/wanandroid.png"
-fi
-	
+	fi
 	```
 * `keyword: o`
 ![](imgs/iconfont.png)
