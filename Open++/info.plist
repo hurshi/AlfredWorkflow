@@ -79,6 +79,13 @@ fi
 if [[ "iconfont" == ${q}* ]];then
 	genItem "json" "open http://www.iconfont.cn" "imgs/iconfont.png"
 fi
+if [[ "wanandroidtools" == ${q}* ]];then
+	genItem "json" "open http://www.wanandroid.com/tools" "imgs/wanandroid.png"
+fi
+if [[ "wanandroid" == ${q}* ]];then
+	genItem "json" "open http://www.wanandroid.com" "imgs/wanandroid.png"
+fi
+
 
 
 cat&lt;&lt;EOB
