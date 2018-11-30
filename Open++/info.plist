@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.github.hurshi.broswer_plus</string>
+	<key>connections</key>
+	<dict>
+		<key>EEDC295C-4813-459A-8C7B-16522A886DE0</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>86744420-5771-4CD2-8CDA-EB4C33A11B19</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>hurshi</string>
+	<key>description</key>
+	<string>open helpful tools</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Open++</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>keyword</key>
+				<string>o</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>waiting</string>
+				<key>script</key>
+				<string>q={query}
+OUTPUT=""
+
+genItem(){
+	key=$1
+	ssh=$2
+	icon=$3
+	
+	OUTPUT="${OUTPUT}&lt;item uid=\"${key}\" arg=\"${ssh}\"&gt;"
+	OUTPUT="${OUTPUT}&lt;title&gt;${ssh}&lt;/title&gt;"
+	OUTPUT="${OUTPUT}&lt;icon&gt;${icon}&lt;/icon&gt;"
+	OUTPUT="${OUTPUT}&lt;/item&gt;"
+}
+
+if [[ "json" == ${q}* ]];then
+	genItem "json" "open http://www.bejson.com/" "imgs/regex.png"
+fi
+if [[ "regex" == ${q}* ]];then
+	genItem "json" "open http://tool.oschina.net/regex/" "imgs/json.png"
+fi
+if [[ "iconfont" == ${q}* ]];then
+	genItem "json" "open http://www.iconfont.cn" "imgs/iconfont.png"
+fi
+
+
+cat&lt;&lt;EOB
+&lt;?xml version="1.0"?&gt;
+&lt;items&gt;
+$OUTPUT
+&lt;/items&gt;
+EOB
+</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Open++</string>
+				<key>type</key>
+				<integer>5</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>EEDC295C-4813-459A-8C7B-16522A886DE0</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<true/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>{query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>86744420-5771-4CD2-8CDA-EB4C33A11B19</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>86744420-5771-4CD2-8CDA-EB4C33A11B19</key>
+		<dict>
+			<key>xpos</key>
+			<integer>430</integer>
+			<key>ypos</key>
+			<integer>140</integer>
+		</dict>
+		<key>EEDC295C-4813-459A-8C7B-16522A886DE0</key>
+		<dict>
+			<key>xpos</key>
+			<integer>140</integer>
+			<key>ypos</key>
+			<integer>140</integer>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>github.com/hurshi</string>
+</dict>
+</plist>
