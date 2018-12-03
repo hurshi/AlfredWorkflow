@@ -4,7 +4,7 @@
 * 来自 [wensonsmith/YoudaoTranslate](https://github.com/wensonsmith/YoudaoTranslate),有道翻译
 * `keyword: yd`
 
-### Open++
+### Help++
 * 快速打开应用，现在只写了快速打开指定网站,`json格式化校验`,`在线正则表达式测试`,`iconfont`等
 * 添加网站可以直接添加代码，如下：
 

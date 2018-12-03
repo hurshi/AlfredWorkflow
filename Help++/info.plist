@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.github.hurshi.broswer_plus</string>
+	<string>com.github.hurshi.help_plus</string>
 	<key>connections</key>
 	<dict>
 		<key>EEDC295C-4813-459A-8C7B-16522A886DE0</key>
@@ -27,7 +27,7 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Open++</string>
+	<string>Help++</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -44,7 +44,7 @@
 				<key>escaping</key>
 				<integer>63</integer>
 				<key>keyword</key>
-				<string>op</string>
+				<string>t</string>
 				<key>queuedelaycustom</key>
 				<integer>1</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -74,17 +74,22 @@ if [[ "json" == ${q}* ]];then
 	genItem "json" "open http://www.bejson.com/" "imgs/regex.png"
 fi
 if [[ "regex" == ${q}* ]];then
-	genItem "json" "open http://tool.oschina.net/regex/" "imgs/json.png"
+	genItem "regex" "open http://tool.oschina.net/regex/" "imgs/json.png"
 fi
 if [[ "iconfont" == ${q}* ]];then
-	genItem "json" "open http://www.iconfont.cn" "imgs/iconfont.png"
+	genItem "iconfont" "open http://www.iconfont.cn" "imgs/iconfont.png"
 fi
 if [[ "wanandroidtools" == ${q}* ]];then
-	genItem "json" "open http://www.wanandroid.com/tools" "imgs/wanandroid.png"
+	genItem "wanandroidtools" "open http://www.wanandroid.com/tools" "imgs/wanandroid.png"
 fi
 if [[ "wanandroid" == ${q}* ]];then
-	genItem "json" "open http://www.wanandroid.com" "imgs/wanandroid.png"
+	genItem "wanandroid" "open http://www.wanandroid.com" "imgs/wanandroid.png"
 fi
+if [[ "kill adb" == ${q}* ]];then
+	genItem "kill adb" "pkill -f adb" "imgs/default.png"
+fi
+
+
 
 
 
