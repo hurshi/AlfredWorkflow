@@ -23,11 +23,11 @@
 	<key>createdby</key>
 	<string>hurshi</string>
 	<key>description</key>
-	<string>open helpful tools</string>
+	<string>one step to open what you want</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Help++</string>
+	<string>QuickTo</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -44,7 +44,7 @@
 				<key>escaping</key>
 				<integer>63</integer>
 				<key>keyword</key>
-				<string>t</string>
+				<string>quick</string>
 				<key>queuedelaycustom</key>
 				<integer>1</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -107,7 +107,7 @@ EOB
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Open++</string>
+				<string>QuickTo</string>
 				<key>type</key>
 				<integer>5</integer>
 				<key>withspace</key>
