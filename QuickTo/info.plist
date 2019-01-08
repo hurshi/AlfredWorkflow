@@ -60,37 +60,27 @@
 OUTPUT=""
 
 genItem(){
-	key=$1
-	ssh=$2
-	icon=$3
-	
-	OUTPUT="${OUTPUT}&lt;item uid=\"${key}\" arg=\"${ssh}\"&gt;"
-	OUTPUT="${OUTPUT}&lt;title&gt;${ssh}&lt;/title&gt;"
-	OUTPUT="${OUTPUT}&lt;icon&gt;${icon}&lt;/icon&gt;"
-	OUTPUT="${OUTPUT}&lt;/item&gt;"
+	OUTPUT=${OUTPUT}"&lt;item uid=\"$1\" arg=\"$3\"&gt;"
+	OUTPUT=${OUTPUT}"&lt;title&gt;$2&lt;/title&gt;"
+	OUTPUT=${OUTPUT}"&lt;icon&gt;"imgs/"$4&lt;/icon&gt;"
+	OUTPUT=${OUTPUT}"&lt;/item&gt;"
 }
 
-if [[ "json" == ${q}* ]];then
-	genItem "json" "open http://www.bejson.com/" "imgs/regex.png"
-fi
-if [[ "regex" == ${q}* ]];then
-	genItem "regex" "open http://tool.oschina.net/regex/" "imgs/json.png"
-fi
-if [[ "iconfont" == ${q}* ]];then
-	genItem "iconfont" "open http://www.iconfont.cn" "imgs/iconfont.png"
-fi
-if [[ "wanandroidtools" == ${q}* ]];then
-	genItem "wanandroidtools" "open http://www.wanandroid.com/tools" "imgs/wanandroid.png"
-fi
-if [[ "wanandroid" == ${q}* ]];then
-	genItem "wanandroid" "open http://www.wanandroid.com" "imgs/wanandroid.png"
-fi
-if [[ "kill adb" == ${q}* ]];then
-	genItem "kill adb" "pkill -f adb" "imgs/default.png"
-fi
+addItem(){
+	if [[ $1 == ${q}* || "*" == ${q}* ]];then
+		genItem $1 $2 $3 $4
+	fi
+}
 
-
-
+addItem "json" "在线 json 解析" "open http://www.bejson.com/" "json.jpg"
+addItem "regex" "在线正则表达式" "open http://tool.oschina.net/regex/" "regex.jpg"
+addItem "iconfont" "字体图标 IconFont" "open http://www.iconfont.cn" "iconfont.png"
+addItem "wanandroidtools" "玩安卓工具箱" "open http://www.wanandroid.com/tools" "wanandroid.jpg"
+addItem "wanandroid" "玩安卓官网" "open http://www.wanandroid.com" "wanandroid.jpg"
+addItem "kill adb" "退出 ADB" "pkill -f adb" "adb.jpg"
+addItem "github" "Github" "open https://github.com/" "github.png"
+addItem "qrcode1" "草料二维码" "open https://cli.im/" "qrcode1.jpg"
+addItem "qrcode2" "联图网二维码" "open http://www.liantu.com/" "qrcode2.jpg"
 
 
 cat&lt;&lt;EOB
@@ -105,7 +95,7 @@ EOB
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string></string>
+				<string>一步直达</string>
 				<key>title</key>
 				<string>QuickTo</string>
 				<key>type</key>
