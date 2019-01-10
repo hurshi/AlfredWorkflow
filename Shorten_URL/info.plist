@@ -83,6 +83,8 @@
 key=${q:0:1}
 value=${q:1}
 
+value=$(echo $value | base64 -D)
+
 case "$key" in 
 	"1")
 		value=$(curl --silent --request POST 'http://url.tool.cc/get_data.php' --data-urlencode "url=$value" --data-urlencode "url_type=shorten" --data-urlencode "url_host=t.cn")
@@ -145,31 +147,34 @@ esac</string>
 				<key>runningsubtext</key>
 				<string>waiting</string>
 				<key>script</key>
-				<string>cat&lt;&lt;EOB
+				<string>q="{query}"
+q=$(echo $q | base64)
+
+cat&lt;&lt;EOB
 &lt;?xml version="1.0"?&gt;
 &lt;items&gt;
 
-&lt;item uid="tcn" arg="1{query}"&gt;
+&lt;item uid="tcn" arg="1$q"&gt;
 &lt;title&gt;t.cn&lt;/title&gt;
 &lt;icon&gt;icons/sina.jpg&lt;/icon&gt;
 &lt;/item&gt;
 
-&lt;item uid="suoim" arg="2{query}"&gt;
+&lt;item uid="suoim" arg="2$q"&gt;
 &lt;title&gt;suo.im&lt;/title&gt;
 &lt;icon&gt;icons/suoim.jpg&lt;/icon&gt;
 &lt;/item&gt;
 
-&lt;item uid="tinyurl" arg="3{query}"&gt;
+&lt;item uid="tinyurl" arg="3$q"&gt;
 &lt;title&gt;tiny.url&lt;/title&gt;
 &lt;icon&gt;icons/tinyurl.jpg&lt;/icon&gt;
 &lt;/item&gt;
 
-&lt;item uid="xco" arg="4{query}"&gt;
+&lt;item uid="xco" arg="4$q"&gt;
 &lt;title&gt;x.co&lt;/title&gt;
 &lt;icon&gt;icons/xco.jpg&lt;/icon&gt;
 &lt;/item&gt;
 
-&lt;item uid="dwzcn" arg="5{query}"&gt;
+&lt;item uid="dwzcn" arg="5$q"&gt;
 &lt;title&gt;dwz.cn&lt;/title&gt;
 &lt;icon&gt;icons/baidu.jpg&lt;/icon&gt;
 &lt;/item&gt;
@@ -181,7 +186,7 @@ EOB</string>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>short your url</string>
+				<string>缩短网址</string>
 				<key>title</key>
 				<string>Shorten URL</string>
 				<key>type</key>
