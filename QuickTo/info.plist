@@ -81,6 +81,11 @@ addItem "kill adb" "退出 ADB" "pkill -f adb" "adb.jpg"
 addItem "github" "Github" "open https://github.com/" "github.png"
 addItem "qrcode1" "草料二维码" "open https://cli.im/" "qrcode1.jpg"
 addItem "qrcode2" "联图网二维码" "open http://www.liantu.com/" "qrcode2.jpg"
+addItem "teambition" "teambition项目管理" "open http://t.cn/8kiEp7J" "teambition.jpg"
+addItem "confluence" "康复伦斯" "open http://t.cn/Eq2dJMU" "confluence.jpg"
+addItem "redmine" "redmine" "open http://t.cn/Eq2DH35" "redmine.jpg"
+addItem "qqmail" "腾讯 企业邮箱" "open https://exmail.qq.com/" "qqmail.jpg"
+
 
 
 cat&lt;&lt;EOB
