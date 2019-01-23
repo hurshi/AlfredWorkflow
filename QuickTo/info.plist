@@ -86,6 +86,8 @@ addItem "confluence" "康复伦斯" "open http://t.cn/Eq2dJMU" "confluence.jpg"
 addItem "redmine" "redmine" "open http://t.cn/Eq2DH35" "redmine.jpg"
 addItem "qqmail" "腾讯 企业邮箱" "open https://exmail.qq.com/" "qqmail.jpg"
 addItem "ui" "蓝湖" "open http://t.cn/EqHGcRC" "lanhu.jpg"
+addItem "history price" "历史价格查询" "open http://p.zwjhl.com/" "history_price.jpg"
+
 
 
 
