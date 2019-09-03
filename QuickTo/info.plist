@@ -4,6 +4,8 @@
 <dict>
 	<key>bundleid</key>
 	<string>com.github.hurshi.help_plus</string>
+	<key>category</key>
+	<string>Tools</string>
 	<key>connections</key>
 	<dict>
 		<key>EEDC295C-4813-459A-8C7B-16522A886DE0</key>
@@ -87,6 +89,8 @@ addItem "redmine" "redmine" "open http://t.cn/Eq2DH35" "redmine.jpg"
 addItem "qqmail" "腾讯 企业邮箱" "open https://exmail.qq.com/" "qqmail.jpg"
 addItem "ui" "蓝湖" "open http://t.cn/EqHGcRC" "lanhu.jpg"
 addItem "history price" "历史价格查询" "open http://p.zwjhl.com/" "history_price.jpg"
+addItem "short" "短网址" "open https://www.sojson.com/dwz.html" "short.png"
+
 
 
 
